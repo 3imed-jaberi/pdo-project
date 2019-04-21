@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+/* put all text in white color and "Raleway" google font ..  */
+body {
+  font-family:"Raleway";
+  color:#f5f6fa;
+}
+/* put all h1 text in center and uppaercase form .. */
+h1 {
+  padding: 24px;
+  text-align:center;
+  color:#000;
+  text-transform:uppercase;
+  background: #8597b1 ;
+}
+/* put all h2 text convergent with norml size .. */
+h2 {
+  padding: 24px 16px;
+  font-size:20px;
+  font-weight:normal;
+}
+
+/* my own container .. */
+.container {
+  padding: 48px 16px;
+  display:flex;
+  background:#2f3640;
+  box-shadow: inset 0 7px 23px -6px rgba(0,0,0,.75), 
+  inset 0 -7px 23px -6px rgba(0,0,0,.75);
+  /* for browsers .. */
+  -webkit-box-shadow: inset 0 7px 23px -6px rgba(0,0,0,.75), 
+  inset 0 -7px 23px -6px rgba(0,0,0,.75);
+  -moz-box-shadow: inset 0 7px 23px -6px rgba(0,0,0,.75), 
+  inset 0 -7px 23px -6px rgba(0,0,0,.75);
+}
+/* puth the search in the left .. */
+
+.left-pane {
+  flex:2;
+  border-right: 2px solid #475261;
+  max-width:800px;
+}
+
+.right-pane {
+  flex:1;
+}
+
+/* some style for the inputs ( text , butomm , .. )  .. */ 
+
+.gt-input {
+  height:48px;
+  padding:0 16px;
+  border:0;
+}
+
+.rounded-left {
+  border-top-left-radius:8px;
+  border-bottom-left-radius: 8px;
+}
+
+.rounded-right {
+  border-top-right-radius:8px;
+  border-bottom-right-radius: 8px;
+}
+
+.gt-button {
+  height:48px;
+  width:160px;
+  border:none;
+  background:grey;
+  font-family:"Raleway";
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#f5f6fa;
+}
+
+/* put some space between the inputs and the buttons .. */
+
+form {
+  display:flex;
+  justify-content: space-between;
+  padding:0 32px;
+}
+
+/* focus the input when select or write some thing .. */
+
+form input:focus,
+form select:focus {
+  outline:none;
+}
+
+/* put some large for the inputs & select .. */
+
+form input[type="text"],
+form select {
+  flex:1;
+}
+
+.gt-input.full-width {
+  width:100%;
+}
+ /* put the font in action .. */
+form input,
+form select {
+  font-family:"Raleway";
+  font-size:16px;
+}
+
+/* now the mini board .. */
+
+table {
+  padding:0 32px;
+  width:100%;
+}
+
+/* ligne in bottom of each data ligne .. */
+
+table tr {
+  display:flex;
+  border-bottom: 1px solid #475261;
+}
+
+/* make all attribut in the hide table in left .. */
+
+table tr th,
+table tr td {
+  text-align: left;
+  padding: 8px;
+}
+/* ! make some width for the first child in the table .. */
+table tr th:nth-child(1),
+table tr td:nth-child(1) {
+  width:80px;
+}
+/* ! put the second child in the left .. */
+table tr th:nth-child(2),
+table tr td:nth-child(2) {
+  flex:1;
+  text-align:left;
+}
+
+/* create scroll list in mini board with some styles .. */
+.data-wrapper {
+  height:280px;
+  overflow-y: scroll;
+  margin-top: 32px;
+}
+
+.data-wrapper::-webkit-scrollbar-track {
+  width:1px;
+  background:#475261;
+}
+
+.data-wrapper::-webkit-scrollbar {
+  width:2px;
+}
+
+.data-wrapper::-webkit-scrollbar-thumb {
+  width:2px;
+  background:#8597b1;
+}
